@@ -18,7 +18,7 @@ import Navbar from './components/Navbar.vue'
 header {
   line-height: 2;
   max-height: 100vh;
-  background-color: #1f58b4;
+  background-color: #8bb7ff;
   padding: 35px;
   align-items: center;
   color: white;
