@@ -20,7 +20,7 @@ import Footer from './components/Footer.vue'
 header {
   line-height: 2;
   max-height: 100vh;
-  background-color: #8bb7ff;
+  background-color: #93c5fd;
   padding: 15px;
   align-items: center;
   color: white;

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <footer class="bg-gray-800 text-gray-300 py-4 w-full">
+    <footer class="bg-blue-300 text-black py-4 w-full">
       <div class="container mx-auto px-10 flex justify-between items-center">
         <!-- Left side with copyright info -->
         <div class="text-sm">
