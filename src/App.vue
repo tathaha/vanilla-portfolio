@@ -11,14 +11,17 @@ import Navbar from './components/Navbar.vue'
       </nav>
     </div>
   </header>
-
   <RouterView />
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
+  line-height: 2;
   max-height: 100vh;
+  background-color: #1f58b4;
+  padding: 35px;
+  align-items: center;
+  color: white;
 }
 
 h1 {

@@ -24,7 +24,7 @@ export default {
   <div>
     <Menu v-bind="this.$attrs" @openMenu="openMenu" @closeMenu="closeMenu">
       <slot>
-        <h1 class="text-white inset-x-auto text-center font-bold py-4 mx-4">Nillawork!</h1>
+        <h1 class="text-white">Nillawork!</h1>
         <RouterLink to="/"><h2>Home</h2></RouterLink>
         <RouterLink to="/about"><h2>About</h2></RouterLink>
         <RouterLink to="/work"><h2>Work</h2></RouterLink>
@@ -34,7 +34,17 @@ export default {
 </template>
 
 <style>
+h1 {
+  right: 50px; /* Add this line */
+  position: absolute;
+  transform: translateX(-50%);
+  top: 7%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  text-align: center;
+}
 h2 {
+  right: 10px;
   margin: 0 auto 3rem;
   padding: 0.2rem 1rem;
   position: relative;
