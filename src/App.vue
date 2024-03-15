@@ -7,7 +7,7 @@ import Footer from './components/Footer.vue'
   <header>
     <div class="wrapper">
       <nav>
-        <h1>Nillawork!</h1>
+        <router-link to="/"><h1>Nillawork!</h1></router-link>
         <Navbar />
       </nav>
     </div>
@@ -21,7 +21,7 @@ header {
   line-height: 2;
   max-height: 100vh;
   background-color: #8bb7ff;
-  padding: 30px;
+  padding: 15px;
   align-items: center;
   color: white;
 }

@@ -4,7 +4,7 @@
       <div class="container mx-auto px-10 flex justify-between items-center">
         <!-- Left side with copyright info -->
         <div class="text-sm">
-          <p>&copy; {{ currentYear }} Your Company</p>
+          <p>&copy; {{ currentYear }} Vanilla</p>
         </div>
 
         <!-- Middle section with developed by information -->
