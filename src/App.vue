@@ -23,9 +23,12 @@ const isDark = useDark()
 
 <style scoped>
 html.dark {
-  --color-bg: #0b0b0b;
-  --color-text: #ffffff;
-  --color-border: #ffffff;
+  color-scheme: dark;
+}
+body {
+  @apply bg-white dark:bg-black;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.2s ease;
 }
 .darkCheckBox {
   position: relative;
