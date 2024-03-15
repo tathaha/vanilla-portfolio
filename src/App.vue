@@ -1,12 +1,17 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import { useDark } from '@vueuse/core'
+const isDark = useDark()
 </script>
 
 <template>
   <header>
     <div class="wrapper">
       <nav>
+        <span class="grid place-content-center">
+          <input class="darkCheckBox" type="checkbox" v-model="isDark" />
+        </span>
         <router-link to="/"><h1>Nillawork!</h1></router-link>
         <Navbar />
       </nav>
@@ -17,6 +22,38 @@ import Footer from './components/Footer.vue'
 </template>
 
 <style scoped>
+html.dark {
+  --color-bg: #0b0b0b;
+  --color-text: #ffffff;
+  --color-border: #ffffff;
+}
+.darkCheckBox {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: inset 0 0 5px rgb(000/50%);
+}
+.darkCheckBox::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.darkCheckBox:checked::before {
+  transform: translateX(100%);
+  background: #0b0b0b;
+}
 header {
   line-height: 2;
   max-height: 100vh;
@@ -37,6 +74,16 @@ h1 {
   text-align: right;
 }
 
+span {
+  right: 200px; /* Add this line */
+  position: absolute;
+  transform: translateX(-50%);
+  top: 7%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  text-align: right;
+}
 .logo {
   display: block;
   margin: 0 auto 2rem;

@@ -11,7 +11,9 @@
         <div class="text-sm">
           <p>
             Developed By
-            <a href="https://chiraitori.lol" class="text-black hover:underline">Chiraitori</a>
+            <a href="https://chiraitori.lol" target="_blank" class="text-black hover:underline"
+              >Chiraitori</a
+            >
           </p>
         </div>
         <div class="flex space-x-4">
