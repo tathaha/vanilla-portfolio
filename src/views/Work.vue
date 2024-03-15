@@ -1,36 +1,58 @@
 <template>
-  <div class="card">
-    <!-- Art Grid -->
-    <div class="art-grid">
-      <!-- Add your art grid items here -->
-    </div>
-
-    <!-- Repo Pin -->
-    <div class="repo-pin">
-      <iframe
-        src="https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=tathaha"
-        frameborder="0"
-        scrolling="no"
-        width="400"
-        height="200"
-      ></iframe>
+  <div class="art-grid">
+    <div v-for="artwork in artworks" :key="artwork.id" class="artwork">
+      <img :src="artwork.image" alt="Artwork" class="artwork-image" />
+      <h3 class="artwork-title">{{ artwork.title }}</h3>
+      <p class="artwork-description">{{ artwork.description }}</p>
     </div>
   </div>
 </template>
 
-<style>
-.card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+<script>
+export default {
+  data() {
+    return {
+      artworks: [
+        {
+          id: 1,
+          image: './src/assets/art/mai.jpg',
+          title: 'Artwork 1',
+          description: 'Description of Artwork 1'
+        },
+        {
+          id: 2,
+          image: './src/assets/art/random.jpeg',
+          title: 'Artwork 2',
+          description: 'Description of Artwork 2'
+        }
+        // Add more artworks as needed
+      ]
+    }
+  }
 }
+</script>
 
+<style scoped>
 .art-grid {
-  /* Add your art grid styles here */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
-.repo-pin {
-  /* Add your repo pin styles here */
+.artwork {
+  text-align: center;
+}
+
+.artwork-image {
+  width: 100%;
+  height: auto;
+}
+
+.artwork-title {
+  margin-top: 10px;
+}
+
+.artwork-description {
+  margin-top: 5px;
 }
 </style>
