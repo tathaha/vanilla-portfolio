@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Navbar from './components/Navbar.vue'
     </div>
   </header>
   <RouterView />
+  <Footer />
 </template>
 
 <style scoped>
@@ -19,7 +21,7 @@ header {
   line-height: 2;
   max-height: 100vh;
   background-color: #8bb7ff;
-  padding: 35px;
+  padding: 30px;
   align-items: center;
   color: white;
 }
@@ -42,7 +44,7 @@ h1 {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
   margin-top: 2rem;
 }
@@ -57,7 +59,6 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
   border-left: 1px solid var(--color-border);
 }
 
@@ -87,8 +88,8 @@ nav a:first-of-type {
     margin-left: -1rem;
     font-size: 1rem;
 
-    padding: 1rem 0;
-    margin-top: 1rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
   }
 }
 </style>
